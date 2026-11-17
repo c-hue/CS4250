@@ -232,3 +232,10 @@ deleteDocument(2)
 
 # Operation 6: print the content of the documents and inverted_index collections
 # --> add your Python code here
+print("Documents:")
+for document in documents.find().sort("_id", 1):
+    print(document)
+
+print ("Inverted Index:")
+for entry in inverted_index.find().sort("term", 1):
+    print(entry)
